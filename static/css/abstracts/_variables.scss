@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+// Name fonts
+$oswald:'Oswald', sans-serif;
+
+// Colors
+$orange: #e24e4b;
+$yellow: #ffbe35;
+$black: #030303;
+$gray: #6F6F6F;
+
+.orange{
+    color: $orange;
+}
+
+.yellow{
+    color:$yellow;
+}
+
+.gray{
+    color: $gray;
+}
+
