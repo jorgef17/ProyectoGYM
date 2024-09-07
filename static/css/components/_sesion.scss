@@ -1,0 +1,167 @@
+@import '../abstracts/variables'; 
+
+*{  
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+.cabecera{
+    
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+	height: 63px;
+    z-index: 100;
+    display: flex;
+	background: rgba(0,0,0,0.6);
+}
+
+.cab_nav{
+    width: 100%;
+	padding: 20px;
+	text-align: right;
+	top: 0px;
+    
+}
+.cab_nav ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 10px 10px;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+    
+}
+.cab_nav ul li a{
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+	cursor: pointer;
+}
+
+.cab_nav ul li a:hover{
+    background: $orange;
+    padding: 2px 5px;
+    border-radius:10px;
+}
+
+.nomb_logo{
+    width: 300px;
+    padding: 0px 20px;
+    float: left;
+    position: relative;
+    top: 5%;
+    left: 2%;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.logo{
+    display: inline-block;
+    width: 80px;
+    position: absolute;
+    margin: -.5em auto;
+    left: 15px;
+    top: -5px;
+}
+
+.logo img{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.video_fondo{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.formulario_ing{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.4);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.info_h2{
+    text-align: center;
+    margin-top: 0;
+    color: white;
+    font-size: 30px;
+}
+
+.formula, .enviar{
+    display: block;
+    padding: 20px;
+    width: 100%;
+    margin: 30px 0px;
+    font-size: 20px;
+    border: none;
+}
+
+.enviar{
+    background: -webkit-gradient(linear,80% 20%, 10% 21%, from($orange), to($yellow));
+    border:0;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-bottom: 0;
+    opacity: 0.7;
+    transition: .8s ease-out;
+    color: #fff;
+}
+.enviar:hover{
+    opacity: 1;
+    border-radius: 0;
+    background: -webkit-gradient(linear,80% 20%, 10% 21%, from($orange), to($yellow));
+
+
+}
+.frase{
+    border: none;
+    width: 100%;
+    color: $gray;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover{
+    color: $orange;
+}
+
+// foot 
+
+.foot{
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 10%;
+    width: 100%;
+    padding: 20px 0px;
+    position: absolute;
+    bottom: 0;
+}
+.foot_p{
+    color: #fff;
+    text-align: center;
+}

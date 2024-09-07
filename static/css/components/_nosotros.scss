@@ -1,0 +1,45 @@
+img{
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+.nosotros{
+    &__contenido{
+        font-size: 20px;
+        position: absolute;
+        width: 40VW;
+        top: 50%;
+        text-align: center;
+        color: white;
+        .btn{
+            background-color: $orange;
+            color: white;
+        }
+        .btn:hover{
+            background-color: black;
+        }
+    }
+    .services{
+        background-color: white;
+        position: absolute;
+        right: 0;
+        height: 90%;
+        width: 55vw;
+        padding: 70px 0px;
+        .service{
+            &__icon{
+                font-size: 50px;
+                color: $orange;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                text-align: center;
+                margin-left: -50px;
+                background-color: white;
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
