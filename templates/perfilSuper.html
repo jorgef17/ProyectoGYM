@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/perfilSuper.css">
+    <title>perfil {{ nombre }}</title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="nav">
+        <a href="/" class="logo">
+            <img src="static/img/Logo.png" alt="">
+        </a>
+        
+        <ul class="opciones">
+            <li class="opcion"><a href="/">INICIO</a></li>
+            <li class="opcion"><a href="/nosotros">ACERCA DE</a></li>
+            <li class="opcion"><a href="/iniciar-sesion">CERRAR SESION</a></li>
+        </ul>
+    </nav>
+
+    <div class="img-fondo">
+        <img src="https://campolaboral.net/wp-content/uploads/2020/06/entrenador-fitness.png" alt="">
+    </div>
+
+    <!--body-->
+    <section class="body">
+        <div class="tittle">
+            <h1 class="bienvenida">BIENVENDO {{ nombre }}</h1>
+        </div>
+        <div class="cuerpo">
+            <div class="perfil">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="" class="foto-perfil">
+                <h2 class="nombre">{{ nombre }}<h2>
+                <h2 class="apellidos">{{ apellidos }}</h2>
+            </div>
+            <div class="tabla-info">
+                <div class="container">
+                    <div class="contenedor">
+                        <h2 class="titulo-tabla">Información usuarios:</h2>
+                        <input type="text" name="busqueda" id="buscador" placeholder="Buscar...">
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <th style="background-color: #FEF68C">Nombre</th>
+                            <th>Apellidos</th>
+                            <th style="background-color: #FEF68C">Identificación</th>
+                            <th>Edad</th>
+                            <th style="background-color: #FEF68C">Celular</th>
+                            <th>Correo</th>
+                            <th style="background-color: #FEF68C">Acciones</th>
+                        </tr>
+                        {% for value in datos %}
+                        <tr id="fila{{loop.index}}" class="lista">
+                            <th style="background-color: #FEF68C">{{value[0]}}</th>
+                            <th>{{value[1]}}</th>
+                            <th style="background-color: #FEF68C">{{value[2]}}</th>
+                            <th>{{value[3]}}</th>
+                            <th style="background-color: #FEF68C">{{value[5]}}</th>
+                            <th>{{value[4]}}</th>
+                            <th style="background-color: #FEF68C"><form method="POST" action="/borrar"><input type="text" name="btn-borrar" value="{{loop.index}}" style="display: none;"><input id="eliminar{{loop.index}}" value="Eliminar" type="submit"></form></th>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+console.log("Hola");
+document.addEventListener("keyup", e=>{
+    if(e.target.matches("#buscador")){
+        document.querySelectorAll(".lista").forEach(f => {
+            if(f.textContent.toLowerCase().includes(e.target.value.toLowerCase())){
+                f.classList.remove("filtro")
+            }else{
+                f.classList.add("filtro")
+            };
+    })
+}
+})
+</script>
+</body>
+</html>

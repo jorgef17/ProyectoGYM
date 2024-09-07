@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regristro</title>
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon" >
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="cab_nav"> 
+            <img src="/static/img/Logo.png" alt="Logo" class="logo_img">
+            
+            <h2 class="nomb_logo">Gimnasio LGRJ</h2>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/nosotros">Nosotros</a></li>
+                <li><a href="/contacto">Contactos</a></li>
+                <li><a href="/planes">Planes</a></li>
+                <li class="marca"><a href="/registro">Registro</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="video_fondo">
+        <video src="/static/img/180419_Boxing_13_10.mp4" autoplay loop muted class="video"></video>
+    </div>
+
+    <form action="/iniciar-sesion" method="POST" class="formulario_ing">
+        <h2 class="info_h2">Iniciar sesión</h2>
+        <input type="text" class="formula" required placeholder="&#128113; Usuario"  name="usuario">
+        <input type="password" class="formula" required placeholder="&#128272; Contraseña" name="password">
+        <input type="submit" value="Login" class="enviar">
+        <p class="frase">¿No tienes cuenta? <a class="link" href="/registro">Registrate</a></p>
+    </form>
+
+    <footer class="foot">
+        <p class="foot_p">pag web Gimnasio &copy</p>
+    </footer>
+     
+</body>
+</html>

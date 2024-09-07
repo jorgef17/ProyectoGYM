@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regristro</title>
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon" >
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="cab_nav">
+            <img src="/static/img/Logo.png" alt="Logo" class="logo_img">
+            <h2 class="nomb_logo">Gimnasio LGRJ</h2>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/nosotros">Nosotros</a></li>
+                <li><a href="/contacto">Contactos</a></li>
+                <li><a href="/planes">Planes</a></li>
+                <li class="marca"><a href="/iniciar-sesion">Acceder</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="video_fondo">
+        <video src="/static/Img/180419_Boxing_08_18.mp4" autoplay loop muted class="video"></video>
+    </div>
+
+    <form action="/registro-exitoso" method="POST" class="formulario_ing">
+        <h2 class="info_h2">Registro</h2>
+        <input type="text" class="formula" required placeholder="&#128113; Nombre"  name="nombre">
+        <input type="text" class="formula" required placeholder="&#128113; Apellidos"  name="apellidos">
+        <input type="text" class="formula" required placeholder="&#128113; Identificación"  name="ID">
+        <input type="text" class="formula" required placeholder="&#128113; Número de celular"  name="celular">
+        <input type="text" class="formula" required placeholder="&#128113; Estatura (Cm)"  name="estatura">
+        <input type="text" class="formula" required placeholder="&#128113; Edad"  name="edad">
+        <input type="email" class="formula" required placeholder="&#128113; Correo"  name="correo">
+        <input type="password" class="formula" required placeholder="&#128272; Contraseña" name="password" >
+        <input type="submit" value="Entrar" class="enviar">
+        <p class="frase">¿Ya tienes una cuenta? <a class="link" href="/iniciar-sesion">Inicia sesión</a></p>
+    <footer class="foot">
+        <p class="foot_p">pag web Gimnasio &copy</p>
+    </footer>
+     
+</body>
+</html>
