@@ -1,0 +1,18 @@
+
+// abstracts
+//@import './abstracts/function';
+@import './abstracts/variables';
+@import './abstracts/base';
+
+// components
+@import './components/components.scss';
+
+
+// @import "~bootstrap/scss/bootstrap";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: $oswald;
+}
